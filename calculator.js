@@ -48,8 +48,8 @@ function update() {
 // that always has 2 decimal places.
 function calculateMonthlyPayment(values) {
 
-const interest = (values.rate / 100) / 12;
-  const n = values.years * 12;
+let interest = (values.rate / 100) / 12;
+  let n = values.years * 12;
   return (
     (interest * values.amount) /
     (1 - Math.pow((1 + interest), -n))
